@@ -1,0 +1,164 @@
+body{
+    overflow-x: hidden;
+}
+.parent{
+    background-color: #ddd;
+    padding: 10px;
+    display: flex;
+    align-items: flex-end;
+}
+h1{
+    text-transform: capitalize;
+    color: rgb(174, 132, 132);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    animation: moving 4s infinite ease-in-out alternate;
+
+}
+
+.col-md-3{
+    position: relative;
+    padding: 10px;
+    height: 60px;
+}
+.col-md-3 div{
+    position: absolute;
+    right: 10px;
+    background-color: #fff;
+    width: 40px;
+    height: 6px;
+    border-radius: 60px;
+    right: 30px;
+    bottom: 0;
+}
+.one{
+    top: 20px;
+}
+.two{
+    top: 30px;
+}
+.three{
+    top: 40px;
+}
+
+ul{
+    list-style: none;
+    position: absolute;
+    right: -500%;
+    top: 95%;
+    margin-top: 0;
+    background-color: #ddd;
+    padding: 10px;
+    width: 150px;
+}
+ul li{
+    text-transform: capitalize;
+    font-size: 25px;
+    line-height: 1.8;
+    text-align: center;
+    
+}
+a{
+    color: #666;
+}
+a:hover{
+    text-decoration: none;
+}
+.parent:hover .one{
+    transition: all 1s ease-in-out;
+    transform: rotateZ(135deg);
+}
+.parent:hover .two{
+    transition: all 1s ease-in-out;
+    display: none;
+}
+.parent:hover .three{
+    transition: all 1s ease-in-out;
+    transform: rotateZ(-135deg);
+    top: 20px;
+}
+.parent:hover ul{
+    transition: all 3s ease-in-out;
+    right: 0;
+}
+h3{
+    text-align: center;
+    text-transform: capitalize;
+    color: rgb(255, 140, 159);
+    margin-top: 10px;
+    font-size: 55px;
+    font-style: italic;
+}
+hr{
+    width: 25%;
+    border: 5px solid #444;
+    border-radius: 20px;
+}
+.flex{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+}
+.flex1,.flex2,.flex3,.flex4{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.flex1 div,.flex2 div,.flex3 div,.flex4 div{
+    position: relative;
+    border-radius: 10px;
+    width: 300px;
+    height: 270px;
+    margin-bottom: 10px;
+    background-color: rgb(212, 207, 207);
+}
+div img{
+    display: inline-block;
+    height: 160px;
+    width: 300px;
+    border-radius: 10px 10px 0 0;
+    
+}
+div p{
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 25px;
+    font-style: italic;
+    margin-top: 5px;
+    color: rgb(236, 86, 86); 
+}
+i{
+    position: absolute;
+    right: 20px;
+    bottom: 15px;
+    color: orange;
+    padding: 10px;
+    border: 1px solid rgb(185, 180, 180);
+    border-radius: 50%;
+    box-shadow: 0 0 0 20px inset rgba(245, 140, 140, 0.7),
+    0 0 0 -20px inset rgba(245, 140, 140, 0.7);
+}
+i:hover{
+    transition: all 1s ease-in-out;
+    box-shadow: none;
+    
+}
+span{
+    color: rgb(119, 35, 38);
+    font-size: 25px;
+    font-style: italic;
+    position: absolute;
+    left: 15px;
+}
+.line-throw{
+    text-decoration: line-through;
+}
+
+@keyframes moving {
+    0%{
+        transform: translatex(0);
+    }    
+    100%{
+        transform: translatex(40%);
+    }
+    
+}
